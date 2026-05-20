@@ -15,6 +15,7 @@ jobs:
           python-version: "3.13"
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --group dev
+      - run: uv run ruff format --check .
       - run: uv run ruff check .
       - run: uv run mypy src
       - run: uv run pytest
