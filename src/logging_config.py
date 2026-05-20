@@ -1,6 +1,7 @@
 import datetime
 import os
 from pathlib import Path
+from typing import Any
 
 
 def cleanup_old_logs(log_dir: Path, keep: int = 5) -> None:
@@ -14,7 +15,7 @@ def cleanup_old_logs(log_dir: Path, keep: int = 5) -> None:
             f.unlink()
 
 
-def make_logging_config(log_dir: Path) -> dict:  # type: ignore[type-arg]
+def make_logging_config(log_dir: Path) -> dict[str, Any]:
     timestamp = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
     log_filename = log_dir / f"run_{timestamp}.log"
 
