@@ -2,6 +2,10 @@
 
 Python project template.
 
+## Prerequisites
+
+[Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+
 ## After cloning
 
 1. Rename `name` in `pyproject.toml`
